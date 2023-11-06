@@ -24,18 +24,18 @@ function updateImage() {
 
 updateImage(); // Mostrar la primera imagen al cargar la página
 
-let verMasBtn = document.getElementById("ver-mas-btn");
-let verMenosBtn = document.getElementById("ver-menos-btn");
-let moreTexto = document.getElementById("mas");
+let texto = document.getElementById("texto");
+let aumentar = document.getElementById("aumentar");
+let disminuir = document.getElementById("disminuir");
 
-verMasBtn.addEventListener("click", function () {
-    moreTexto.classList.remove("ocultar");
-    verMasBtn.classList.add("ocultar");
-    verMenosBtn.classList.remove("ocultar");
+// Función para aumentar el tamaño del texto
+aumentar.addEventListener("click", () => {
+    let original = window.getComputedStyle(texto).fontSize;
+    texto.style.fontSize = (parseInt(original) + 2) + "px";
 });
 
-verMenosBtn.addEventListener("click", function () {
-    moreTexto.classList.add("ocultar");
-    verMasBtn.classList.remove("ocultar");
-    verMenosBtn.classList.add("ocultar");
+// Función para reducir el tamaño del texto
+disminuir.addEventListener("click", () => {
+    let original = window.getComputedStyle(texto).fontSize;
+    texto.style.fontSize = (parseInt(original) - 2) + "px";
 });

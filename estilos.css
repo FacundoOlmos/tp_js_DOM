@@ -1,4 +1,4 @@
-/* Estilo global */
+
 * {
     background-color: crimson;
     padding: 0;
@@ -63,12 +63,8 @@
     background-color: rgba(245, 245, 245, 0.877);
 }
 
-.ocultar {
-    display: none;
-}
-
-#ver-mas-btn,
-#ver-menos-btn {
+#aumentar,
+#disminuir {
     border-radius: 15px;
     background-color: whitesmoke;
     color: black;
@@ -78,7 +74,7 @@
     margin: 10px 10px; 
 }
 
-#ver-mas-btn:hover,
-#ver-menos-btn:hover {
+#aumentar:hover,
+#disminuir:hover {
     background-color: rgba(245, 245, 245, 0.877);
 }
