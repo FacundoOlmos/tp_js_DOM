@@ -48,7 +48,7 @@
 }
 
 #prev-button,
-#next-button {
+#prox-button {
     border-radius: 15px;
     background-color: whitesmoke;
     color: black;
@@ -59,7 +59,7 @@
 }
 
 #prev-button:hover,
-#next-button:hover {
+#prox-button:hover {
     background-color: rgba(245, 245, 245, 0.877);
 }
 

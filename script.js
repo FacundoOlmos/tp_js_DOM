@@ -1,25 +1,25 @@
 const images = ["./imagenes/ANIMALS.jpg", "./imagenes/DARK.jpg", "./imagenes/DELICATE.jpg"];
-let currentImageIndex = 0;
+let imagenActual = 0;
 
 const prevButton = document.getElementById("prev-button");
-const nextButton = document.getElementById("next-button");
+const proxButton = document.getElementById("prox-button");
 const carouselImage = document.getElementById("carousel-image");
 
-prevButton.addEventListener("click", showPrevImage);
-nextButton.addEventListener("click", showNextImage);
+prevButton.addEventListener("click", mostrarPrevImg);
+proxButton.addEventListener("click", mostrarProxImg);
 
-function showPrevImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+function mostrarPrevImg() {
+    imagenActual = (imagenActual - 1 + images.length) % images.length;
     updateImage();
 }
 
-function showNextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
+function mostrarProxImg() {
+    imagenActual = (imagenActual + 1) % images.length;
     updateImage();
 }
 
 function updateImage() {
-    carouselImage.src = images[currentImageIndex];
+    carouselImage.src = images[imagenActual];
 }
 
 updateImage(); // Mostrar la primera imagen al cargar la página
