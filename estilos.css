@@ -1,0 +1,84 @@
+/* Estilo global */
+* {
+    background-color: crimson;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: monospace;
+
+}
+
+
+
+.titulo {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.titulo h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.textoInformativo {
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    margin: 10px;
+    color: white;
+    flex-direction: column;
+    
+}
+
+.carousel-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 30px;
+}
+
+#carousel-image {
+    max-width: 100%;
+    max-height: 400px;
+    padding: 20px;
+    border: 5px solid whitesmoke; 
+    border-radius: 10px; 
+}
+
+#prev-button,
+#next-button {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px; 
+}
+
+#prev-button:hover,
+#next-button:hover {
+    background-color: rgba(245, 245, 245, 0.877);
+}
+
+.ocultar {
+    display: none;
+}
+
+#ver-mas-btn,
+#ver-menos-btn {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px; 
+}
+
+#ver-mas-btn:hover,
+#ver-menos-btn:hover {
+    background-color: rgba(245, 245, 245, 0.877);
+}
