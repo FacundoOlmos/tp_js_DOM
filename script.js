@@ -1,9 +1,13 @@
-const images = ["./imagenes/ANIMALS.jpg", "./imagenes/DARK.jpg", "./imagenes/DELICATE.jpg"];
+/*1-Generar un carrusel de imágenes: Utiliza el DOM para crear un carrusel de
+imágenes que permite al usuario avanzar o retroceder entre imágenes.*/
+
+
+let images = ["./imagenes/ANIMALS.jpg", "./imagenes/DARK.jpg", "./imagenes/DELICATE.jpg"];
 let imagenActual = 0;
 
-const prevButton = document.getElementById("prev-button");
-const proxButton = document.getElementById("prox-button");
-const carouselImage = document.getElementById("carousel-image");
+let prevButton = document.getElementById("prev-button");
+let proxButton = document.getElementById("prox-button");
+let carouselImage = document.getElementById("carousel-image");
 
 prevButton.addEventListener("click", mostrarPrevImg);
 proxButton.addEventListener("click", mostrarProxImg);
@@ -22,20 +26,41 @@ function updateImage() {
     carouselImage.src = images[imagenActual];
 }
 
-updateImage(); // Mostrar la primera imagen al cargar la página
+updateImage();
+
+/*2-Texto que se lee más: Crea un botón que, al hacer clic, cambia el tamaño del texto
+de un elemento en el DOM para que sea más grande o más pequeño.*/
+
 
 let texto = document.getElementById("texto");
 let aumentar = document.getElementById("aumentar");
 let disminuir = document.getElementById("disminuir");
 
-// Función para aumentar el tamaño del texto
+
 aumentar.addEventListener("click", () => {
     let original = window.getComputedStyle(texto).fontSize;
     texto.style.fontSize = (parseInt(original) + 2) + "px";
 });
 
-// Función para reducir el tamaño del texto
 disminuir.addEventListener("click", () => {
     let original = window.getComputedStyle(texto).fontSize;
     texto.style.fontSize = (parseInt(original) - 2) + "px";
+});
+
+/*3-Tarjetas clickeables: Genera una serie de tarjetas en el DOM, cada una con un
+contenido diferente. Permite que el usuario haga clic en una tarjeta para expandirla y
+mostrar más detalles.*/
+
+let imgContainers = document.querySelectorAll(".containerImagen");
+
+imgContainers.forEach((container, index) => {
+    let textoImg = container.querySelector(".descripcionImagen");
+
+    container.addEventListener("click", () => {
+        if (textoImg.style.display === "none") {
+            textoImg.style.display = "block";
+        } else {
+            textoImg.style.display = "none";
+        }
+    });
 });
